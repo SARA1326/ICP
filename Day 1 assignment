@@ -1,4 +1,4 @@
-question 1
+question 1 :
 
 
 class Solution {
@@ -20,11 +20,25 @@ class Solution {
   }
 };
 
-question 2 : not done
+question 2 : 
+
+public int[] maxSlidingWindow(int[] nums, int k) {
+    int[] arr = new int[nums.length-k+1];
+    int in = 0 ;
+    for(int i=0;i<nums.length;i++){
+        if(i+k>nums.length) break;
+        int max = Integer.MIN_VALUE;
+        for(int j=i;j<k+i;j++){
+            max=Math.max(max,nums[j]);
+        }
+        arr[in++]=max;
+    }
+    return arr;
+}
 
 
 
-question 3
+question 3 :
 
 
 class Solution {
